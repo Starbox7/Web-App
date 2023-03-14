@@ -1,0 +1,32 @@
+/* h1 {
+	text-align: center;
+} */
+
+/* ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	margin: 10px 0;
+}
+
+button {
+	margin: 10px;
+} */
+
+#1 {
+	flex: 1;
+	background-color: #cb2626;
+	border: 1px solid #35a199;
+	padding: 10px;
+}
+
+head {
+	background-color: azure;
+}
+
+/* body {
+	flex: 100%;
+} */
