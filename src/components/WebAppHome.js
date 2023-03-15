@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 import forest from "../asset/forest.png"
+import dcu from "../asset/dcu.png"
 
 const Container = styled.div`
     display: flex;
@@ -16,8 +17,9 @@ const Intro = styled.div`
 `
 const Title = styled.h1`
     display: flex;
+    justify-content: center;
     margin: 5px;
-    margin-top: 100px;
+    margin-top: 20px;
     margin-bottom: 13px;
 `
 const Content = styled.h2`
@@ -38,7 +40,7 @@ const ButtonContainer = styled.div`
         flex-direction: column;
     }
 `
-const WebAppDevelopment = styled.a`
+const OrangeButton = styled.a`
     color: white;
     background-color: #FFA15B;
     padding: 7px;
@@ -54,7 +56,7 @@ const WebAppDevelopment = styled.a`
         margin-bottom: 10px;
     }
 `
-const CodeforDCU = styled.a`
+const SkyButton = styled.a`
     color: white;
     background-color: #34D1FF;
     padding: 7px;
@@ -70,7 +72,7 @@ const CodeforDCU = styled.a`
         margin-bottom: 10px;
     }
 `
-const WeSaveTogether = styled.a`
+const PupleButton = styled.a`
     color: white;
     background-color: #D25BFF;
     padding: 7px;
@@ -92,24 +94,49 @@ const HashTag = styled.p`
     margin-top: 5px;
     color: blue;
 `
+const DCULogo = styled.h1`
+    display: flex;
+    justify-content: center;
+    color: blue;
+    font-size: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+`
 
 
 
-export default function Main() {
+export default function WebAppHome() {
     return (
         <Container>
             <Intro>
-                <Title>별 한가득, 별나라, 별상자의 모든것.</Title>
-                <Content>꿈과 희망이 넘치는 별나라를 만들기 위한</Content>
-                <Content>연결된 워크스페이스입니다.</Content>
+                <DCULogo>DCU</DCULogo>
+                <Title>[웹앱 실습]</Title>
+                <Content>성명 : 김범준</Content>
+                <Content>URL : http://starbox918.dothome.co.kr/</Content>
                 <HashTag>#HTML5 #Responsive-w3css #Javascript #styled-component</HashTag>
             </Intro>
             <ButtonContainer>
-                <WebAppDevelopment href="/WebApp">웹 앱 개발 실습 바로가기</WebAppDevelopment>
-                <CodeforDCU href="/">코드forDCU 바로가기</CodeforDCU>
-                <WeSaveTogether href="/">우리함께해요 바로가기</WeSaveTogether>
+                <OrangeButton href="/WebApp">1. 실습환경구축</OrangeButton>
+                <SkyButton href="/">2. 404 not Found!!</SkyButton>
+                <PupleButton href="/">3. 404 not Found!!</PupleButton>
+            </ButtonContainer>
+            <ButtonContainer>
+                <OrangeButton href="/WebApp">4. 404 not Found!!</OrangeButton>
+                <SkyButton href="/">5. 404 not Found!!</SkyButton>
+                <PupleButton href="/">6. 404 not Found!!</PupleButton>
+            </ButtonContainer>
+            <ButtonContainer>
+                <OrangeButton href="/WebApp">7. 404 not Found!!</OrangeButton>
+                <SkyButton href="/">8. 404 not Found!!</SkyButton>
+                <PupleButton href="/">9. 404 not Found!!</PupleButton>
+            </ButtonContainer>
+            <ButtonContainer>
+                <OrangeButton href="/WebApp">10. 404 not Found!!</OrangeButton>
+                <SkyButton href="/">11. 404 not Found!!</SkyButton>
+                <PupleButton href="/">12. 404 not Found!!</PupleButton>
             </ButtonContainer>
             <Footer>
+                <p>모든 권한은 대구가톨릭대학교 모바일 소프트웨어 전공 소속 김범준에게 있습니다.</p>
                 <img src={forest} alt="forest" />
                 <p>Copyright (c) 2023, starbox918@naver.com | workspace version 0.0.1</p>
             </Footer>
