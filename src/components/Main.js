@@ -33,6 +33,10 @@ const Footer = styled.div`
 `
 const ButtonContainer = styled.div`
     margin-top: 50px;
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 const WebAppDevelopment = styled.a`
     color: white;
@@ -43,6 +47,9 @@ const WebAppDevelopment = styled.a`
     margin-right: 5px;
     padding: 10px;
     text-underline-position: under;
+    @media (max-width: 768px) {
+        margin-bottom: 10px;
+    }
 `
 const CodeforDCU = styled.a`
     color: white;
@@ -53,6 +60,9 @@ const CodeforDCU = styled.a`
     margin-right: 5px;
     padding: 10px;
     text-underline-position: under;
+    @media (max-width: 768px) {
+        margin-bottom: 10px;
+    }
 `
 const WeSaveTogether = styled.a`
     color: white;
@@ -64,6 +74,12 @@ const WeSaveTogether = styled.a`
     padding: 10px;
     text-underline-position: under;
 `
+const HashTag = styled.p`
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    color: blue;
+`
 
 
 
@@ -74,9 +90,10 @@ export default function Main() {
                 <Title>별 한가득, 별나라, 별상자의 모든것.</Title>
                 <Content>꿈과 희망이 넘치는 별나라를 만들기 위한</Content>
                 <Content>연결된 워크스페이스입니다.</Content>
+                <HashTag>#HTML5 #Responsive-w3css #Javascript #styled-component</HashTag>
             </Intro>
             <ButtonContainer>
-                <WebAppDevelopment href="/">웹 앱 개발 바로가기</WebAppDevelopment>
+                <WebAppDevelopment href="/">웹 앱 개발 실습 바로가기</WebAppDevelopment>
                 <CodeforDCU href="/">코드forDCU 바로가기</CodeforDCU>
                 <WeSaveTogether href="/">우리함께해요 바로가기</WeSaveTogether>
             </ButtonContainer>

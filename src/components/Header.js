@@ -7,6 +7,9 @@ import logo from "../asset/totoro.png"
 const Container = styled.div`
     height: 50px;
     display: flex;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 const Logo = styled.div`
     flex : 2;
@@ -21,7 +24,9 @@ flex: 14;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 const LeftMenu = styled.div`
     
