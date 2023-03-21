@@ -1,6 +1,6 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom";
 
-import forest from "../asset/forest.png"
 
 const Container = styled.div`
     display: flex;
@@ -19,17 +19,17 @@ const Title = styled.h1`
     margin: 5px;
     margin-top: 100px;
     margin-bottom: 13px;
+    @media (max-width: 768px) {
+        font-size: 21px;
+    }
 `
 const Content = styled.h2`
     display: flex;
     justify-content: center;
     margin: 1px;
-`
-const Footer = styled.div`
-    flex: 5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @media (max-width: 768px) {
+        font-size: 17px;
+    }
 `
 const ButtonContainer = styled.div`
     margin-top: 50px;
@@ -38,7 +38,7 @@ const ButtonContainer = styled.div`
         flex-direction: column;
     }
 `
-const WebAppDevelopment = styled.a`
+const WebAppDevelopment = styled.p`
     color: white;
     background-color: #FFA15B;
     padding: 7px;
@@ -46,15 +46,16 @@ const WebAppDevelopment = styled.a`
     margin-left: 17px;
     margin-right: 5px;
     padding: 10px;
-    text-underline-position: under;
+    text-decoration: none;
     display: flex;
     width: 190px;
     justify-content: center;
+    font-weight: bold;
     @media (max-width: 768px) {
         margin-bottom: 10px;
     }
 `
-const CodeforDCU = styled.a`
+const CodeforDCU = styled.p`
     color: white;
     background-color: #34D1FF;
     padding: 7px;
@@ -66,11 +67,12 @@ const CodeforDCU = styled.a`
     display: flex;
     width: 190px;
     justify-content: center;
+    font-weight: bold;
     @media (max-width: 768px) {
         margin-bottom: 10px;
     }
 `
-const WeSaveTogether = styled.a`
+const WeSaveTogether = styled.p`
     color: white;
     background-color: #D25BFF;
     padding: 7px;
@@ -82,6 +84,7 @@ const WeSaveTogether = styled.a`
     display: flex;
     width: 190px;
     justify-content: center;
+    font-weight: bold;
     @media (max-width: 768px) {
         margin-bottom: 10px;
     }
@@ -91,6 +94,9 @@ const HashTag = styled.p`
     justify-content: center;
     margin-top: 5px;
     color: blue;
+    @media (max-width: 768px) {
+        font-size: 10px;
+    }
 `
 
 
@@ -105,14 +111,16 @@ export default function Main() {
                 <HashTag>#HTML5 #Responsive-w3css #Javascript #styled-component</HashTag>
             </Intro>
             <ButtonContainer>
-                <WebAppDevelopment href="/WebApp">웹 앱 개발 실습 바로가기</WebAppDevelopment>
-                <CodeforDCU href="/">코드forDCU 바로가기</CodeforDCU>
-                <WeSaveTogether href="/">우리함께해요 바로가기</WeSaveTogether>
+                <Link to="/WebApp" style={{ textDecoration: 'none' }}>
+                    <WebAppDevelopment>웹 앱 개발 실습 바로가기</WebAppDevelopment>
+                </Link>
+                <Link to="/CFD" style={{ textDecoration: 'none' }}>
+                    <CodeforDCU>코드forDCU 바로가기</CodeforDCU>
+                </Link>
+                <Link to="/WST" style={{ textDecoration: 'none' }}>
+                    <WeSaveTogether>우리함께해요 바로가기</WeSaveTogether>
+                </Link>
             </ButtonContainer>
-            <Footer>
-                <img src={forest} alt="forest" />
-                <p>Copyright (c) 2023, starbox918@naver.com | workspace version 0.0.1</p>
-            </Footer>
         </Container>
     )
 }
