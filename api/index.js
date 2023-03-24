@@ -43,7 +43,7 @@ app.post('/send', async (req, res) => {
         type: 'SMS',
         contentType: 'COMM',
         countryCode: '82',
-        from: '01032342803',
+        from: '',
         content: 'me-rong',
         messages: [
             {
